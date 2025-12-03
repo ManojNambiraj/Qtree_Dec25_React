@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import "./NewBtn.css";
 
-function NewBtn(props) {    
+function NewBtn(props) {
   return (
-    <span>
-      <button>{props.btnName}</button>
+    <span className="childCompo">
+      <button
+        style={{ backgroundColor: props.btnColor }}
+        onClick={() => {props.handle(props.btnName)}}
+      >
+        {props.btnName}
+      </button>
     </span>
   );
 }
 
-export default NewBtn
+export default NewBtn;
