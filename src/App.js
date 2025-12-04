@@ -1,23 +1,14 @@
-import "./App.css";
-import NewBtn from "./NewBtn";
+import React from 'react'
+import "./App.css"
+import LocalState from './LocalState'
 
 function App() {
-  function handle(value) {
-    alert(value);
-  }
-
   return (
-    <div className="App">
-      <h1>Hello John</h1>
-
-      <NewBtn btnName="All" btnColor="green" handle={handle} />
-      <NewBtn btnName="Music" btnColor="pink" handle={handle} />
-      <NewBtn btnName="Drama" handle={handle} />
-      <NewBtn btnName="Songs" handle={handle} />
-      <NewBtn btnName="Movies" handle={handle} />
-      <NewBtn btnName="Books" handle={handle} />
+    <div className='App'>
+      <LocalState />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
