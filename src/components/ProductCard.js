@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function ProductCard(props) {
   return (
@@ -7,13 +7,16 @@ function ProductCard(props) {
       <div className="card-body">
         <h5 className="card-title">{props.product.pName}</h5>
         <h6 className="card-title">{props.product.price}</h6>
+        <p className="card-text">{props.product.desc}</p>
         <p className="card-text">
-          {props.product.desc}
+          {props.product.isStock ? "-in stock" : "-out of stock"}
         </p>
-        <button className="btn btn-primary">Go somewhere</button>
+        <button className="btn btn-primary" disabled={!props.product.isStock}>
+          Add to cart
+        </button>
       </div>
     </div>
   );
 }
 
-export default ProductCard
+export default ProductCard;
