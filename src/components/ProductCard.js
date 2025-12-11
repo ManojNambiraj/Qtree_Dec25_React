@@ -11,7 +11,11 @@ function ProductCard(props) {
         <p className="card-text">
           {props.product.isStock ? "-in stock" : "-out of stock"}
         </p>
-        <button className="btn btn-primary" disabled={!props.product.isStock}>
+        <button
+          className="btn btn-primary"
+          disabled={!props.product.isStock}
+          onClick={() => {props.handleAddtoCart(props.product)}}
+        >
           Add to cart
         </button>
       </div>
