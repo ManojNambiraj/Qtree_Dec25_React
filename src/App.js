@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Ecommerce from "./Ecommerce";
+import UserApp from "./UserApp";
+// import Ecommerce from "./Ecommerce";
 // import LocalState from './LocalState'
 // import RoutingDemo from './RoutingDemo';
 
@@ -11,7 +12,10 @@ function App() {
 
       {/* <RoutingDemo /> */}
 
-      <Ecommerce />
+      {/* <Ecommerce /> */}
+
+      <UserApp />
+
     </div>
   );
 }
